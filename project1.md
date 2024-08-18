@@ -82,6 +82,51 @@ Click the Download button/ inspect/ Hover your mouse cursor over Copy① and the
 Run this command sudo curl -o /var/www/html/2137_barista_cafe.zip https://www.tooplate.com/zip-templates/2137_barista_cafe.zip to download the websites file to your html directory.
 
 ![pic](img/img24.png)
-gi
+
+Unzip the contents of the website by running sudo unzip <2137_barista_cafe.zip>
+so i ran sudo unzip 2137_barista_cafe.zip.
+
+i Updated nginx configuration by running the command sudo nano /etc/nginx/sites-available/default. Then, edit the root directive within your server block to point to the directory where your downloaded website content is store
+
+I Restart Nginx to apply the changes by running: sudo systemctl restart nginx.
+
+I Open a web browser and go to your Public IPv4 address/Elastic IP address to confirm that your website is working as expected.
 
 
+##Create An A Record
+To make your website accessible via your domain name rather than the IP address, you'll need to set up a DNS record. I did this by buying my domain from Namecheap and then moving hosting to AWS Route 53, where I set up an A record.
+
+On the website i click on Domain List
+
+![pic](img/img34.png)
+
+![pic](img/25.png)
+
+![pic](img/img26.png)
+
+![pic](img/img27.png)
+
+![pic](img/img29.png)
+
+![pic](img/img30.png)
+
+
+Click on create record again, to create the record for your sub domain.
+
+Input the Record name(www➀), paste your IP address➁, and then click on Create records➂.
+
+Open your terminal and run sudo nano /etc/nginx/sites-available/default to edit your settings. Enter your domain and subdomain names, then save the changes.
+
+![pic](img/25.png)
+
+I Restart your nginx server by running the sudo systemctl restart nginx command.
+
+i Used  domain name in a web browser to verify that your website is accessible.
+
+
+
+I Install certbot and Request For an SSL/TLS Certificate
+
+![pic](img/img48.png)
+![pic](img/img49.png)
+![pic](img/img50.png)
