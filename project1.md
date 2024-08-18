@@ -3,12 +3,7 @@
 Named folder devops bootcamp where a file (project1.md) was created
 ## git init to turn directory into resipository
 
-
 synchronisze Vscode with Github by pushing from local device to github
-
-![2] (img/2.png)
-
-![3] (img/3.png)
 
 ## Create Ubuntu server clicking on Ec2 from AWS console
 
@@ -99,8 +94,6 @@ To make your website accessible via your domain name rather than the IP address,
 On the website i click on Domain List
 
 ![pic](img/img34.png)
-
-![pic](img/25.png)
 
 ![pic](img/img26.png)
 
